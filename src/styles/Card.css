@@ -1,0 +1,92 @@
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
+    /* border: 1px solid #ccc; */
+    width: 100%;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2%;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    /* width: calc(33.33% - 20px); Para criar 3 colunas */
+    max-width: 130px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, max-height 0.3s ease; /* Adicione max-height aqui */
+    max-height: 130px; /* Define a altura inicial */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa a altura */
+    position: relative;
+  }
+  
+  .project-card.active {
+    max-height: 200%; /* Valor máximo de altura para exibir todas as informações */
+  }
+    
+  .project-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #340068;
+    margin-bottom: 10px;
+  }
+  
+  .project-card h3.active {
+    color: #340068; /* Cor diferente para indicar que está ativo */
+  }
+  
+  .project-card h3 a {
+    color: #340068;
+    text-decoration: none;
+  }
+  
+  .project-card p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .rollout-content {
+    max-height: 0; /* Inicialmente, o conteúdo fica oculto */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .project-card.active .rollout-content {
+    max-height: 200px; /* Altura máxima para exibir o conteúdo rolado */
+    padding-top: 10px; /* Espaço para o conteúdo ser visível */
+  }
+
+  .rollout-content a {
+    display: block;
+    margin-top: 10px;
+    color: #340068;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .rollout-content a:hover {
+    color: #9c5fb6;
+  }
+
+  .toggle-info {
+    font-size: 14px;
+    color: #340068;
+    cursor: pointer;    
+    transition: color 0.3s ease;
+  }
+  
+  .toggle-info:hover {
+    color: #777;
+  }

@@ -19,10 +19,11 @@ import board from "../svgs/board.svg"
 import algorithm from "../svgs/graph-svgrepo-com.svg"
 import communication from "../svgs/communication-5-svgrepo-com.svg"
 import node from "../svgs/node-svgrepo-com.svg"
+import Projects from './Projects';
 
 function Main() {
 
-  const [info, setinfo] = useState("")
+  const [info, setinfo] = useState("about")
 
   const getInfo = (string) => {
     setinfo(string)
@@ -44,11 +45,12 @@ function Main() {
         >
           Habilidades
         </button>
-        {/* <button
-        onClick={() => getInfo("experience") }
+        <button
+        onClick={() => getInfo("projects") }
+        className={info === "projects" && "selected-button"}
         >
-          Experiência
-        </button> */}
+          Projetos
+        </button>
         <button
         onClick={() => getInfo("contact") }
         className={info === "contact" && "selected-button"}
@@ -57,22 +59,21 @@ function Main() {
         </button>
       </div>
       {info === "about" && (
-        <div className="div-about">
-          <p>
-            Moro em Brasilia - DF
+        <div className="div-about about-info">
+          <p className="about-text">
+            Moro em Brasília - DF
           </p>
-          <p>
+          <p className="about-text">
             Formado em Administração
           </p>
-          <p>
+          <p className="about-text">
             Comecei a programar em 2022
           </p>
-          <p>
+          <p className="about-text">
             Como hobbies, costumo assistir séries e futebol
           </p>
         </div>
-      )
-      }
+      )}
       {info === "abilities" && (
         <div className="div-abilities">
           <div>
@@ -150,17 +151,17 @@ function Main() {
         </div>
       )
       }
+      {info === "projects" && <Projects />}
       {info === "contact" && (
-        <div className="div-contact">
-          <p>
+        <div className="div-contact contact-info">
+          <p className="contact-link">
             <a href="https://www.linkedin.com/in/kuytinho/">- LinkedIn</a>
           </p>
-          <p>
-          <a href="https://github.com/Kuytinho">- GitHub</a>
+          <p className="contact-link">
+            <a href="https://github.com/Kuytinho">- GitHub</a>
           </p>
         </div>
-      )
-      }
+      )}
 
     </main>
   );
