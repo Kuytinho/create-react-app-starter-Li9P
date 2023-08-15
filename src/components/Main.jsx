@@ -24,6 +24,12 @@ import Projects from './Projects';
 function Main() {
 
   const [info, setinfo] = useState("about")
+  const [language, setLanguage] = useState("pt"); // Estado para rastrear o idioma
+
+  const toggleLanguage = () => {
+    const newLanguage = language === "pt" ? "en" : "pt"; // Alternar entre "pt" e "en"
+    setLanguage(newLanguage);
+  };
 
   const getInfo = (string) => {
     setinfo(string)
@@ -31,6 +37,11 @@ function Main() {
 
   return (
     <main>
+      {/* <div className="language-toggle">
+        <button className="language-button" onClick={toggleLanguage}>
+          {language === "pt" ? "English 🇺🇸" : "Português 🇧🇷"}
+        </button>
+      </div> */}
       <div className="div-introduction">
         <h4 className="bem-vindo">Bem-vindo(a) à minha landing page!</h4>
         <button

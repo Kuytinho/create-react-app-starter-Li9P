@@ -2,9 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-top: 20px;
+    margin-top: 05%; 
+    margin-left: 05%; 
     /* border: 1px solid #ccc; */
-    width: 100%;
+    width: 90%;
+    /* border: 1px solid black */
   }
   
   .project-card {
@@ -48,7 +50,7 @@
   .project-card p {
     margin-top: 10px;
     font-size: 0.9rem;
-    color: #333;
+    /* color: #333; */
   }
   
   .project-card:hover {
@@ -82,7 +84,7 @@
 
   .toggle-info {
     font-size: 14px;
-    color: #340068;
+    color: black;
     cursor: pointer;    
     transition: color 0.3s ease;
   }

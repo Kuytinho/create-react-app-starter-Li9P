@@ -33,6 +33,7 @@ main {
   margin-top: 05%; /* Ajuste esse valor de acordo com a altura do seu cabeçalho */
   display: flex;
   justify-content: space-between;
+  margin-left: 2%
 }
 
 .div-introduction {
@@ -47,7 +48,7 @@ main {
   flex-flow: column nowrap;
   width: 70%;
   max-width: 70%;
-  
+  margin-top: 05%; 
 }
 
 .div-contact {
@@ -55,7 +56,7 @@ main {
   flex-flow: column nowrap;
   width: 70%;
   max-width: 70%;
-  
+  margin-top: 05%; 
 }
 
 .div-abilities {
@@ -64,6 +65,7 @@ main {
   width: 70%;
   max-width: 70%;
   justify-content: space-evenly;
+  margin-top: 05%; 
 }
 
 .div-foto {
@@ -137,12 +139,12 @@ button:active {
 .contact-link {
   margin: 5px 0;
   font-size: 16px;
-  color: #555;
+  color: black;
   transition: color 0.3s ease;
 }
 
 .contact-link a {
-  color: #555;
+  color: black;
   text-decoration: none;
 }
 
@@ -160,8 +162,30 @@ button:active {
 .about-text {
   margin: 5px 0;
   font-size: 16px;
-  color: #555;
+  color: black;
   line-height: 1.5;
+}
+
+.language-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px; /* Espaçamento direita */
+  margin-top: 2px; /* Espaçamento acima */
+}
+
+.language-button {
+  padding: 8px 16px; /* Espaçamento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  background-color: #4CAF50; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remova a borda */
+  border-radius: 4px; /* Borda arredondada */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-button:hover {
+  background-color: #45a049; /* Cor de fundo ao passar o mouse */
 }
 
 
