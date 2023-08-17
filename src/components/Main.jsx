@@ -24,12 +24,12 @@ import Projects from './Projects';
 function Main() {
 
   const [info, setinfo] = useState("about")
-  const [language, setLanguage] = useState("pt"); // Estado para rastrear o idioma
+  // const [language, setLanguage] = useState("pt"); // Estado para rastrear o idioma
 
-  const toggleLanguage = () => {
-    const newLanguage = language === "pt" ? "en" : "pt"; // Alternar entre "pt" e "en"
-    setLanguage(newLanguage);
-  };
+  // const toggleLanguage = () => {
+  //   const newLanguage = language === "pt" ? "en" : "pt"; // Alternar entre "pt" e "en"
+  //   setLanguage(newLanguage);
+  // };
 
   const getInfo = (string) => {
     setinfo(string)
@@ -37,34 +37,29 @@ function Main() {
 
   return (
     <main>
-      {/* <div className="language-toggle">
-        <button className="language-button" onClick={toggleLanguage}>
-          {language === "pt" ? "English 🇺🇸" : "Português 🇧🇷"}
-        </button>
-      </div> */}
       <div className="div-introduction">
         <h4 className="bem-vindo">Bem-vindo(a) à minha landing page!</h4>
         <button
-        onClick={() => getInfo("about") }
-        className={info === "about" && "selected-button"}
+          onClick={() => getInfo("about")}
+          className={info === "about" ? "selected-button" : ""}
         >
           Sobre Mim
         </button>
         <button
-        onClick={() => getInfo("abilities") }
-        className={info === "abilities" && "selected-button"}
+          onClick={() => getInfo("abilities")}
+          className={info === "abilities" ? "selected-button" : ""}
         >
           Habilidades
         </button>
         <button
-        onClick={() => getInfo("projects") }
-        className={info === "projects" && "selected-button"}
+          onClick={() => getInfo("projects")}
+          className={info === "projects" ? "selected-button" : ""}
         >
           Projetos
         </button>
         <button
-        onClick={() => getInfo("contact") }
-        className={info === "contact" && "selected-button"}
+          onClick={() => getInfo("contact")}
+          className={info === "contact" ? "selected-button" : ""}
         >
           Contato
         </button>
