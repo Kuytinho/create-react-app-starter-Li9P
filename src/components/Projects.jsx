@@ -16,6 +16,11 @@ const Projects = () => {
           description: "Projeto feito com React.js, usando o @mui para ajudar na estilização.",
           link: "https://kuytinhopokedex.up.railway.app"
         },
+        {
+          name: "Jokenpo",
+          description: "Projeto feito com React.js no front-end, usando o bootstrap para ajudar na estilização; express.js no back-end e PostgreSQL para o banco de dados.",
+          link: "https://jokenpodokuytinho.up.railway.app/"
+        },
       ];
 
       const toggleProjectInfo = (projectName) => {
